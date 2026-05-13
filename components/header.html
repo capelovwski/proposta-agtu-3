@@ -1,46 +1,73 @@
 <nav class="nav">
   <!-- Logo -->
   <a href="index.html" class="nav__logo">
-    <img src="img/logo/AGTU LOGO.png" alt="AGTU Logo" style="height: 34px; width: auto;" />
+    <img src="img/logo/blue-agtu-trendmark.png" alt="AGTU Logo" style="height: 34px; width: auto;" />
   </a>
 
   <!-- Links -->
   <ul class="nav__links">
-    <li>
+    <li class="nav__item">
       <a href="#" class="nav__link">
-        Technology
+        Associate
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </a>
+      <div class="nav__dropdown">
+        <a href="#enroll" class="nav__dropdown-link">Accounting and Finance</a>
+        <a href="#enroll" class="nav__dropdown-link">Artificial Intelligence</a>
+        <a href="#enroll" class="nav__dropdown-link">Cloud Computing</a>
+        <a href="#enroll" class="nav__dropdown-link">Cybersecurity</a>
+        <a href="#enroll" class="nav__dropdown-link">Data Science</a>
+        <a href="#enroll" class="nav__dropdown-link">Digital Business</a>
+        <a href="#enroll" class="nav__dropdown-link">Health Management</a>
+        <a href="#enroll" class="nav__dropdown-link">Human Resources</a>
+        <a href="#enroll" class="nav__dropdown-link">International Legal Affairs</a>
+        <a href="#enroll" class="nav__dropdown-link">Marketing and Sales</a>
+      </div>
     </li>
-    <li>
+    <li class="nav__item">
       <a href="#" class="nav__link">
-        Business
+        Bachelor
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </a>
+      <div class="nav__dropdown">
+        <a href="#enroll" class="nav__dropdown-link">Computer Science</a>
+        <a href="#enroll" class="nav__dropdown-link">Digital Business</a>
+      </div>
     </li>
-    <li>
+    <li class="nav__item">
       <a href="#" class="nav__link">
-        Education
+        Master
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </a>
+      <div class="nav__dropdown">
+        <a href="#enroll" class="nav__dropdown-link">Artificial Intelligence</a>
+        <a href="#enroll" class="nav__dropdown-link">Cloud Computing</a>
+        <a href="#enroll" class="nav__dropdown-link">Cyber Security</a>
+        <a href="#enroll" class="nav__dropdown-link">Education in Sustainability</a>
+      </div>
     </li>
-    <li>
+    <li class="nav__item">
       <a href="#" class="nav__link">
-        Legal
+        MBA
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </a>
+      <div class="nav__dropdown">
+        <a href="#enroll" class="nav__dropdown-link">Digital Business</a>
+        <a href="#enroll" class="nav__dropdown-link">Sustainability</a>
+      </div>
     </li>
-    <li>
+    <li class="nav__item">
       <a href="#" class="nav__link">
-        Health
+        Certifications
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </a>
-    </li>
-    <li>
-      <a href="#" class="nav__link">
-        Partnership
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </a>
+      <div class="nav__dropdown">
+        <a href="#enroll" class="nav__dropdown-link">Harvard Micro-Certifications</a>
+        <a href="#enroll" class="nav__dropdown-link">MIT Micro-Certifications</a>
+        <a href="#enroll" class="nav__dropdown-link">Babson Certifications</a>
+        <a href="#enroll" class="nav__dropdown-link">UC Berkeley Certifications</a>
+        <a href="#enroll" class="nav__dropdown-link">View All Certifications</a>
+      </div>
     </li>
   </ul>
 
@@ -58,14 +85,71 @@
 
 <!-- Mobile nav overlay (hidden by default) -->
 <div class="nav-mobile" id="navMobile">
-  <ul>
-    <li><a href="#" onclick="toggleMobileNav()">Technology</a></li>
-    <li><a href="#" onclick="toggleMobileNav()">Business</a></li>
-    <li><a href="#" onclick="toggleMobileNav()">Education</a></li>
-    <li><a href="#" onclick="toggleMobileNav()">Legal</a></li>
-    <li><a href="#" onclick="toggleMobileNav()">Health</a></li>
-    <li><a href="#" onclick="toggleMobileNav()">Partnership</a></li>
-    <li><a href="#contact" class="btn btn--primary" onclick="toggleMobileNav()">Get Started</a></li>
+  <ul class="nav-mobile__list" style="overflow-y: auto; max-height: calc(100vh - var(--nav-h) - 40px); padding-right: 10px;">
+    <li class="nav-mobile__item">
+      <div class="nav-mobile__header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('svg').classList.toggle('rotated')">
+        Associate
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="nav-mobile__submenu">
+        <a href="#enroll" onclick="toggleMobileNav()">Accounting and Finance</a>
+        <a href="#enroll" onclick="toggleMobileNav()">Artificial Intelligence</a>
+        <a href="#enroll" onclick="toggleMobileNav()">Cloud Computing</a>
+        <a href="#enroll" onclick="toggleMobileNav()">Cybersecurity</a>
+        <a href="#enroll" onclick="toggleMobileNav()">Data Science</a>
+        <a href="#enroll" onclick="toggleMobileNav()">Digital Business</a>
+        <a href="#enroll" onclick="toggleMobileNav()">Health Management</a>
+        <a href="#enroll" onclick="toggleMobileNav()">Human Resources</a>
+        <a href="#enroll" onclick="toggleMobileNav()">International Legal Affairs</a>
+        <a href="#enroll" onclick="toggleMobileNav()">Marketing and Sales</a>
+      </div>
+    </li>
+    <li class="nav-mobile__item">
+      <div class="nav-mobile__header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('svg').classList.toggle('rotated')">
+        Bachelor
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="nav-mobile__submenu">
+        <a href="#enroll" onclick="toggleMobileNav()">Computer Science</a>
+        <a href="#enroll" onclick="toggleMobileNav()">Digital Business</a>
+      </div>
+    </li>
+    <li class="nav-mobile__item">
+      <div class="nav-mobile__header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('svg').classList.toggle('rotated')">
+        Master
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="nav-mobile__submenu">
+        <a href="#enroll" onclick="toggleMobileNav()">Artificial Intelligence</a>
+        <a href="#enroll" onclick="toggleMobileNav()">Cloud Computing</a>
+        <a href="#enroll" onclick="toggleMobileNav()">Cyber Security</a>
+        <a href="#enroll" onclick="toggleMobileNav()">Education in Sustainability</a>
+      </div>
+    </li>
+    <li class="nav-mobile__item">
+      <div class="nav-mobile__header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('svg').classList.toggle('rotated')">
+        MBA
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="nav-mobile__submenu">
+        <a href="#enroll" onclick="toggleMobileNav()">Digital Business</a>
+        <a href="#enroll" onclick="toggleMobileNav()">Sustainability</a>
+      </div>
+    </li>
+    <li class="nav-mobile__item">
+      <div class="nav-mobile__header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('svg').classList.toggle('rotated')">
+        Certifications
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="nav-mobile__submenu">
+        <a href="#enroll" onclick="toggleMobileNav()">Harvard Micro-Certifications</a>
+        <a href="#enroll" onclick="toggleMobileNav()">MIT Micro-Certifications</a>
+        <a href="#enroll" onclick="toggleMobileNav()">Babson Certifications</a>
+        <a href="#enroll" onclick="toggleMobileNav()">UC Berkeley Certifications</a>
+        <a href="#enroll" onclick="toggleMobileNav()">View All Certifications</a>
+      </div>
+    </li>
+    <li style="margin-top: 16px;"><a href="#contact" class="btn btn--primary" onclick="toggleMobileNav()">Get Started</a></li>
   </ul>
 </div>
 
@@ -81,10 +165,20 @@
   }
   .nav-mobile.open { display: flex; }
   .nav-mobile ul { list-style: none; }
-  .nav-mobile li { border-bottom: 1px solid var(--gray-100); }
-  .nav-mobile a {
-    display: block; padding: 16px 0;
-    font-size: 1.05rem; font-weight: 600; color: var(--gray-900);
+  .nav-mobile__item { border-bottom: 1px solid var(--gray-100); }
+  .nav-mobile__header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; font-size: 1.05rem; font-weight: 600; color: var(--gray-900);
+    cursor: pointer;
+  }
+  .nav-mobile__header svg { width: 16px; height: 16px; transition: transform 0.3s; }
+  .nav-mobile__header svg.rotated { transform: rotate(180deg); }
+  .nav-mobile__submenu {
+    display: none; padding-bottom: 16px; padding-left: 16px;
+  }
+  .nav-mobile__submenu.open { display: block; }
+  .nav-mobile__submenu a {
+    display: block; padding: 10px 0; font-size: 0.95rem; font-weight: 500; color: var(--gray-700);
   }
   .nav-mobile .btn { margin-top: 24px; width: 100%; text-align: center; justify-content: center; }
 </style>
