@@ -1,0 +1,66 @@
+<nav class="nav">
+  <!-- Logo -->
+  <a href="index.html" class="nav__logo" aria-label="AGTU — Home">
+    <img src="img/logo/AGTU LOGO.png" alt="AGTU" class="nav__logo-img" />
+  </a>
+
+  <!-- Links -->
+  <ul class="nav__links">
+    <li><a href="#" class="nav__link">Technology</a></li>
+    <li><a href="#" class="nav__link">Business</a></li>
+    <li><a href="#" class="nav__link">Education</a></li>
+    <li><a href="#" class="nav__link">Legal</a></li>
+    <li><a href="#" class="nav__link">Health</a></li>
+    <li><a href="#" class="nav__link">Partnership</a></li>
+  </ul>
+
+  <!-- Actions -->
+  <div class="nav__actions">
+    <a href="#contact" class="btn btn--ghost btn--sm">Contact</a>
+    <a href="#enroll"  class="btn btn--primary btn--sm">Get Started</a>
+  </div>
+
+  <!-- Mobile hamburger -->
+  <button class="nav__hamburger" aria-label="Menu" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay (hidden by default) -->
+<div class="nav-mobile" id="navMobile">
+  <ul>
+    <li><a href="#" onclick="toggleMobileNav()">Technology</a></li>
+    <li><a href="#" onclick="toggleMobileNav()">Business</a></li>
+    <li><a href="#" onclick="toggleMobileNav()">Education</a></li>
+    <li><a href="#" onclick="toggleMobileNav()">Legal</a></li>
+    <li><a href="#" onclick="toggleMobileNav()">Health</a></li>
+    <li><a href="#" onclick="toggleMobileNav()">Partnership</a></li>
+    <li><a href="#contact" class="btn btn--primary" onclick="toggleMobileNav()">Get Started</a></li>
+  </ul>
+</div>
+
+<style>
+  .nav-mobile {
+    position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,.98);
+    backdrop-filter: blur(20px);
+    z-index: 99;
+    display: none; flex-direction: column;
+    padding: 32px;
+    border-top: 1px solid var(--gray-200);
+  }
+  .nav-mobile.open { display: flex; }
+  .nav-mobile ul { list-style: none; }
+  .nav-mobile li { border-bottom: 1px solid var(--gray-100); }
+  .nav-mobile a {
+    display: block; padding: 16px 0;
+    font-size: 1.05rem; font-weight: 600; color: var(--gray-900);
+  }
+  .nav-mobile .btn { margin-top: 24px; width: 100%; text-align: center; justify-content: center; }
+</style>
+
+<script>
+  function toggleMobileNav() {
+    document.getElementById('navMobile').classList.toggle('open');
+  }
+</script>
